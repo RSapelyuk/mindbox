@@ -1,0 +1,20 @@
+Class triangle
+{
+  double a,b,c;
+  public triangle(double A, double B, double C)
+  {
+    a=A; b=B; c=C;
+  }
+  public double A { get { return a;} set { a = value;}}
+  public double B { get { return b;} set { b = value;}}
+  public double C { get { return c;} set { c = value;}}
+  
+  public double area(triangle tr)
+  {
+    double p=(tr.A+tr.B+tr.C)/2;
+    if ((tr.A!=0 && tr.B!=0 && tr.C!=0) &&
+      (tr.A+tr.B>=tr.C)&&(tr.A+tr.C>=tr.B)&&(tr.C+tr.B>=tr.A))
+      return Math.Sqrt(p*(p-tr.A)*(p-tr.B)*(p-tr.c));//Формула Герона
+      else Console.WriteLine("wrong parameters");
+  }
+}
