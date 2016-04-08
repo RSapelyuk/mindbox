@@ -1,0 +1,4 @@
+SELECT CustomerID
+FROM Clients, Products 
+WHERE ProductName='молоко' AND (ProductName!='сметана' AND 
+MONTH(`date`) = MONTH(NOW()) AND YEAR(`date`) = YEAR(NOW());
